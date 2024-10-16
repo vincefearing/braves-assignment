@@ -4,16 +4,15 @@ This project involves two Python scripts to interact with the MLB **StatsAPI** a
 
 ## Prerequisites
 
-1. **Python 3.x** must be installed.
-2. Install the required Python packages by running:
+**Python 3.x** must be installed. 2. Install the required Python packages by running:
 
-   ```bash
-   pip install requests pandas sqlite3
+```bash
+pip install requests pandas sqlite3
 
-   ```
+```
 
-3. Script 1: fetch_api_data.py
-   This script pulls relevant pitching stats for the 2018 Atlanta Braves from the StatsAPI and stores them in a CSV file.
+Script 1: fetch_api_data.py
+This script pulls relevant pitching stats for the 2018 Atlanta Braves from the StatsAPI and stores them in a CSV file.
 
 How to Run
 Download or copy the script: fetch_api_data.py
@@ -28,8 +27,8 @@ Fetches pitching data for the 2018 Atlanta Braves from the MLB StatsAPI.
 Extracts relevant stats such as player ID, name, games played, wins, losses, strikeouts, walks, innings pitched, hits, home runs, earned runs, ERA, WHIP, and saves.
 Saves this data in a CSV file (braves_2018_pitching_stats.csv).
 
-2. Script 2: compare_api_vs_db.py
-   This second script is my brief attempt at creating an audit system. There were a couple things I had to workout when coding it up. Firstly the pitchbypitch db uses PitcherID while the api uses playerID, so I had to do some formatting between the two to get the comparisons working. Secondly I noticed that not all of the pitcher data is in the pitchbypitch table. Therefore I had to filter out which players existed in both.
+Script 2: compare_api_vs_db.py
+This second script is my brief attempt at creating an audit system. There were a couple things I had to workout when coding it up. Firstly the pitchbypitch db uses PitcherID while the api uses playerID, so I had to do some formatting between the two to get the comparisons working. Secondly I noticed that not all of the pitcher data is in the pitchbypitch table. Therefore I had to filter out which players existed in both.
 
 The script basically compares stats from the StatsAPI and an SQLite database (main.db) that contains detailed pitch-by-pitch data for the 2018 Atlanta Braves. It calculates differences in key pitching stats like strikeouts, walks, innings pitched, hits, and home runs.
 
