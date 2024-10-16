@@ -14,6 +14,7 @@ HAVING MAX(CASE WHEN year = '2002' THEN CAST(WAR AS REAL) ELSE 0 END) > 3
     OR SUM(CAST(WAR AS REAL)) > 5
 ORDER BY total_war DESC;
 
+Results: See WAR.csv or go to link below
 https://docs.google.com/spreadsheets/d/1X1YviKnCOBAF7jd9XGjNGPZWJZyAbIlkZMAq8wZeAuE/edit?usp=sharing
 
 -- Write a query that returns every pitcher who threw at least one pitch for the Atlanta Braves in
@@ -31,6 +32,7 @@ WHERE p.TeamKey = '43135'
   AND p.year = '2018'
 GROUP BY p.playerID, p.name;
 
+Results: See min_1_pitch.csv or go to link below
 https://docs.google.com/spreadsheets/d/1Hp8wdvNiGNe6S5rWpEubIatsI7cZ1ZmygnWzsDi0hzA/edit?usp=sharing
 
 -- How many plate appearances did Luke Jackson have that reached a two-strike count but did
@@ -53,6 +55,8 @@ FROM PITCHBYPITCH
 WHERE PitcherID = '592426'
   AND STRIKES = '2'
   AND CAST(IS_STRIKEOUT AS INTEGER) = 0;
+
+Results: See luke.csv or go to link below
 
 https://docs.google.com/spreadsheets/d/1cpW4c1QtpmjLo9xpUfsFTI7p4EdtruPqXDC5IR1MpUc/edit?usp=sharing
 
